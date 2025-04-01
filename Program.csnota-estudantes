@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Array de estudantes
+        string[] estudantes = { "Ana", "Bruno", "Carlos", "Diana", "Eduardo" };
+        
+        // Lista de notas correspondentes
+        List<double> notas = new List<double> { 8.5, 9.0, 6.8, 7.2, 9.5 };
+
+        // Calculando a média das notas
+        double media = notas.Average();
+        
+        // Encontrando a maior nota e o estudante correspondente
+        double maiorNota = notas.Max();
+        int indiceMaior = notas.IndexOf(maiorNota);
+        string estudanteMaiorNota = estudantes[indiceMaior];
+        
+        // Encontrando a menor nota e o estudante correspondente
+        double menorNota = notas.Min();
+        int indiceMenor = notas.IndexOf(menorNota);
+        string estudanteMenorNota = estudantes[indiceMenor];
+
+        // Exibindo os resultados
+        Console.WriteLine($"Média das notas: {media:F2}");
+        Console.WriteLine($"Maior nota: {maiorNota} - Estudante: {estudanteMaiorNota}");
+        Console.WriteLine($"Menor nota: {menorNota} - Estudante: {estudanteMenorNota}");
+    }
+}
